@@ -1,0 +1,15 @@
+server:
+  port: 8080
+
+spring:
+  data:
+    mongodb:
+      authentication-database: admin
+      username: admin
+      password: admin
+      database: skbtcode
+      port: 27017
+      host: localhost
+      auto-index-creation: true
+
+
