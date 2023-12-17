@@ -7,7 +7,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
@@ -18,7 +17,7 @@ public class StudentController {
     private final IStudentService studentService;
 
     @GetMapping(value = "fetchAllStudents")
-    public ResponseEntity<List<Student>> fetchAllStudents(){
+    public ResponseEntity<List<Student>> fetchAllStudents() {
         return ResponseEntity.ok().body(studentService.getAllStudents());
     }
 }
