@@ -1,6 +1,8 @@
 package com.skbt.mongo_db_connection.model;
 
 import com.skbt.mongo_db_connection.enums.Gender;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Size;
 import lombok.Data;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.index.Indexed;
@@ -16,6 +18,8 @@ import java.util.List;
 public class Student {
     @Id
     private String id;
+    @NotBlank
+    @Size(min = 0, max = 30)
     private String firstName;
     private String lastName;
     @Indexed(unique = true)
